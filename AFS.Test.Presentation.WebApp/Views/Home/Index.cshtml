@@ -1,0 +1,126 @@
+﻿@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Translation Calls List";
+}
+
+<section class="row">
+    <div class="col-10 offset-1">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active">Translation Calls List <span class="badge bg-info">Total Calls: @Model.Count</span> </li>
+            <li class="breadcrumb-item" aria-current="page"><a asp-controller="Home" asp-action="Translate">Perform a new text translation <span>+</span></a></li>
+          </ol>
+        </nav>
+    </div>
+</section>
+
+<!-- Filter form area -->
+<section class="row mt-5">
+    <div class="col-12">
+        <form id="filterForm">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Filter List</h5>
+                    <p class="card-subtitle mb-2">Filter the list below by "keyword in Text or User", "Translation type" or "Date of translation"</p>
+
+                    <div class="row">
+
+                        <div class="col-4 d-flex align-content-center">
+                            <div class="input-group">
+                                <select class="custom-select form-control" id="filterByType" aria-label="Example select with button addon">
+                                    <option value="" selected>Filter by Translation type</option>
+                                    <option value="valspeak">Valspeak</option>
+                                    <option value="minion">Minion</option>
+                                    <option value="ferb-latin">Ferb-Latin</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-4 d-flex align-content-center">
+                            <div class="input-group">
+                                <input id="filterByKeyword" type="text" class="form-control" placeholder="Filter by keyword in Text or User" aria-label="Text">
+                            </div>
+                        </div>
+
+                        <div class="col-4 d-flex align-content-center">
+                            <div class="input-group">
+                                <input id="filterByDate" type="date" class="form-control" title="Filter by entered data" aria-label="Date">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary btn-sm" type="submit">Filter List</button>
+                    <a class="btn btn-secondary btn-sm" type="button" asp-controller="Home" asp-action="Index">Clear Filter</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="row mt-5">
+    <div class="col-12">
+        @if (!Model.ListItems.Any())
+        {
+            <p class="text-center alert alert-info">There are no translation calls added yet!</p>
+        }
+        else
+        {
+            <table class="table table-hover table-responsive">
+                <thead>
+                <tr>
+                    <td>Owner (User)</td>
+                    <td>Text Sent</td>
+                    <td>Translated Text Received</td>
+                    <td>Translation Used</td>
+                    <td>Call Date</td>
+                </tr>
+                </thead>
+                
+                <tbody>
+                @foreach (var call in Model.ListItems)
+                {
+                    <tr style="cursor: pointer">
+                        <td>@call.User</td>
+                        <td>@call.Text</td>
+                        <td>@call.Translated</td>
+                        <td>
+                            <span class="badge bg-info">@call.Translation</span>
+                        </td>
+                        <td>
+                            @call.TimeStamp.ToLongDateString()
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        }
+    </div>
+</section>
+
+<section class="row mt-1">
+    <div class="col-12 d-flex justify-content-end align-content-end">
+        <nav aria-label="Page navigation">
+          <ul class="pagination">
+              @if (Model.PrevPage > 0)
+              {
+                  <li class="page-item"><a class="page-link bg-info text-light"
+                                           asp-controller="Home"
+                                           asp-action="Index"
+                                           asp-route-page="@Model.PrevPage">Previous</a></li>
+              }
+              
+              @if (Model.NextPage > 0)
+              {
+                  <li class="page-item"><a class="page-link bg-info text-light" 
+                                           asp-controller="Home" 
+                                           asp-action="Index" 
+                                           asp-route-page="@Model.NextPage" >Next</a></li>
+              }
+          </ul>
+        </nav>
+    </div>
+</section>
+

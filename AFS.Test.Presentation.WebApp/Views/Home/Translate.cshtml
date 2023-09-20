@@ -1,0 +1,62 @@
+@{
+    ViewData["Title"] = "Translate a text";
+}
+
+<section class="row">
+    <div class="col-10 offset-1">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a asp-controller="Home" asp-action="Index">Translation Calls List</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Perform a new text translation</li>
+          </ol>
+        </nav>
+    </div>
+</section>
+
+<section class="row mt-5">
+    <div class="col-6 d-flex align-items-center">
+        <form id="myForm">
+            <div class="card p-3" style="width: 30rem">
+                <div class="card-header">
+                    <h5 class="card-title">Translate a Text</h5>
+                </div>
+                
+                <div class="card-body">
+                    
+                    <div class="form-group">
+                        <label for="type">Select Translation Type:</label>
+                        <select id="type" class="form-control">
+                            <option value="valspeak.json">Valspeak</option>
+                            <option value="minion.json">Minion</option>
+                            <option value="ferb-latin.json">Ferb-Latin</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text">Enter Text:</label>
+                        <input type="text" id="text" required class="form-control"/>
+                        <small id="emailHelp" class="form-text text-muted">We will translate inputed text to the selected translation type above</small>
+                    </div>
+                </div>
+                
+                <div class="card-footer">
+                    <button id="submitBtn" type="submit" class="btn btn-primary btn-sm">Translate Text!</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <div class="col-6 d-flex align-items-center">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Result</h5>
+                <p class="card-subtitle">Your translated text would be displayed here!</p>
+
+                <div id="resultSuccess" hidden class="alert alert-success" role="alert">
+                </div>
+                <div id="resultFailed" hidden class="alert alert-danger" role="alert">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

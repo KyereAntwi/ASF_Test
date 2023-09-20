@@ -1,0 +1,299 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/kyere/Desktop/AFS.Test/AFS.Test.Presentation.WebApp/AFS.Test.Presentation.WebApp.csproj": {}
+  },
+  "projects": {
+    "/Users/kyere/Desktop/AFS.Test/AFS.Test.Application/AFS.Test.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Application/AFS.Test.Application.csproj",
+        "projectName": "AFS.Test.Application",
+        "projectPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Application/AFS.Test.Application.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/kyere/Desktop/AFS.Test/AFS.Test.Domain/AFS.Test.Domain.csproj": {
+                "projectPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Domain/AFS.Test.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.7.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kyere/Desktop/AFS.Test/AFS.Test.Domain/AFS.Test.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Domain/AFS.Test.Domain.csproj",
+        "projectName": "AFS.Test.Domain",
+        "projectPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Domain/AFS.Test.Domain.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kyere/Desktop/AFS.Test/AFS.Test.Persistence/AFS.Test.Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Persistence/AFS.Test.Persistence.csproj",
+        "projectName": "AFS.Test.Persistence",
+        "projectPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Persistence/AFS.Test.Persistence.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Persistence/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/kyere/Desktop/AFS.Test/AFS.Test.Application/AFS.Test.Application.csproj": {
+                "projectPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Application/AFS.Test.Application.csproj"
+              },
+              "/Users/kyere/Desktop/AFS.Test/AFS.Test.Domain/AFS.Test.Domain.csproj": {
+                "projectPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Domain/AFS.Test.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.11, )"
+            },
+            "Microsoft.Extensions.Options.ConfigurationExtensions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kyere/Desktop/AFS.Test/AFS.Test.Presentation.WebApp/AFS.Test.Presentation.WebApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Presentation.WebApp/AFS.Test.Presentation.WebApp.csproj",
+        "projectName": "AFS.Test.Presentation.WebApp",
+        "projectPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Presentation.WebApp/AFS.Test.Presentation.WebApp.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Presentation.WebApp/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.307/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/kyere/Desktop/AFS.Test/AFS.Test.Application/AFS.Test.Application.csproj": {
+                "projectPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Application/AFS.Test.Application.csproj"
+              },
+              "/Users/kyere/Desktop/AFS.Test/AFS.Test.Domain/AFS.Test.Domain.csproj": {
+                "projectPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Domain/AFS.Test.Domain.csproj"
+              },
+              "/Users/kyere/Desktop/AFS.Test/AFS.Test.Persistence/AFS.Test.Persistence.csproj": {
+                "projectPath": "/Users/kyere/Desktop/AFS.Test/AFS.Test.Persistence/AFS.Test.Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
